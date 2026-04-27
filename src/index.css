@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand: #A02850;
-  --color-brand-light: #c83466;
-  --color-brand-dark: #7c1f3e;
+  --color-brand: #82143D;
+  --color-brand-light: #A51A4D;
+  --color-brand-dark: #5A0E2A;
+  --color-secondary: #BDBDBD;
   
   --animate-fade-up: fadeUp 0.8s ease-out forwards;
   --animate-fade-in: fadeIn 0.5s ease-out forwards;
