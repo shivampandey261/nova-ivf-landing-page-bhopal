@@ -26,8 +26,8 @@ const WhatsAppButton = ({ city }) => {
   }, [isVisible]);
 
   const message = encodeURIComponent(`Hi, I'd like to book a consultation in ${city}`);
-  // Using a dummy phone number for the placeholder
-  const waUrl = `https://wa.me/919876543210?text=${message}`;
+  // Using the requested phone number (formatting for India +91, stripping leading 0 from STD code if necessary, or just using as is if it's a direct WA number)
+  const waUrl = `https://wa.me/918044474588?text=${message}`;
 
   if (!isVisible) return null;
 
