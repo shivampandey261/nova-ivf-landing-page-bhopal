@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #A02850;
+  --color-brand-light: #c83466;
+  --color-brand-dark: #7c1f3e;
+  
+  --animate-fade-up: fadeUp 0.8s ease-out forwards;
+  --animate-fade-in: fadeIn 0.5s ease-out forwards;
+  
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply text-gray-800 bg-white font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+}
